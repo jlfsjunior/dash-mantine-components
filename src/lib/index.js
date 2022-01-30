@@ -52,6 +52,8 @@ import NumberInput from "./components/NumberInput.react";
 import JsonInput from "./components/JsonInput.react";
 import ThemeIcon from "./components/ThemeIcon.react";
 import RingProgress from "./components/RingProgress.react";
+import TimeInput from "./components/TimeInput.react";
+import TimeRangeInput from "./components/TimeRangeInput.react";
 
 export {
     Button,
@@ -108,4 +110,6 @@ export {
     JsonInput,
     ThemeIcon,
     RingProgress,
+    TimeInput,
+    TimeRangeInput
 };
