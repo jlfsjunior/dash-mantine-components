@@ -15,9 +15,10 @@ const TimeRangeInput = (props) => {
     nProps = renderDashComponents(nProps, ["icon", "rightSection", "description", "error", "label"]);
     // Parse dates.
     nProps.value = value.map(v => new Date(v));
-    nProps.defaultValue = defaultValue && defaultValue.map(v => new Date(v));
+    nProps.defaultValue = defaultValue ? defaultValue.map(v => new Date(v)) : [new Date(undefined), new Date(undefined)];
+    console.log(nProps);
     // Bind OnChange event.
-    const onChange = d => setProps({ value: d && d.map(v => dayjs(v).format("YYYY-MM-DDTHH:mm:ss"))});
+    const onChange = (d) => setProps({ value: d.map(v => dayjs(v).format("YYYY-MM-DDTHH:mm:ss"))});
     // Render component
     return (
         <MantineTimeRangeInput
